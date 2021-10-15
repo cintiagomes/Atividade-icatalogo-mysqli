@@ -33,22 +33,22 @@
 
           <div class="input-group span2">
             <label for="descricao">Descrição</label>
-            <input type="text" name="descricao" value="" id="descricao" required>
+            <input type="text" name="descricao" value="" id="descricao" "">
           </div>
 
           <div class="input-group">
             <label for="peso">Peso</label>
-            <input type="text" name="peso" value="" id="peso" required>
+            <input type="text" name="peso" value="" id="peso" "">
           </div>
 
           <div class="input-group">
             <label for="quantidade">Quantidade</label>
-            <input type="text" name="quantidade" value="" id="quantidade" required>
+            <input type="text" name="quantidade" value="" id="quantidade" "">
           </div>
 
           <div class="input-group">
             <label for="cor">Cor</label>
-            <input type="text" name="cor" value="" id="cor" required>
+            <input type="text" name="cor" value="" id="cor" "">
           </div>
 
           <div class="input-group">
@@ -58,7 +58,7 @@
 
           <div class="input-group">
             <label for="valor">Valor</label>
-            <input type="text" name="valor" value="" id="valor" required>
+            <input type="text" name="valor" value="" id="valor" "">
           </div>
 
           <div class="input-group">
@@ -70,7 +70,7 @@
 
             <label for="categoria">Categoria</label>
 
-            <select id="categoria" name="categoria" required>
+            <select id="categoria" name="categoria" "">
 
               <option value="">SELECIONE</option>
     

@@ -76,7 +76,7 @@
 
                 <article class="card-produto">
 
-                       <div class="acoes-produtos">
+                    <div class="acoes-produtos">
                     <img onclick="javascript: window.location = './editar/?id=<?= $produto['id'] ?>'" src="../imgs/edit.svg" />
                     <img onclick="deletar(<?= $produto['id'] ?>)" src="../imgs/trash.svg" />
                     </div>

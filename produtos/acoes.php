@@ -207,9 +207,33 @@
             break;
 
         case 'editar':
+
+                $idProduto = $_POST["idProduto"];
+
+                if ($_FILES["foto"]["error"] != UPLOAD_ERR_NO_FILE) {
+                    
+                    $sqlImagem = "SELECT imagem FROM tbl_produto WHERE id = $idProduto";
+
+                    $resultado = mysqli_query($conexao, $sqlImagem);
+                    $produto = mysqli_fetch_array($resultado);
+
+
+                }
             
                 $id = $_POST["id"];
                 $descricao = $_POST["descricao"];
+                $peso = str_replace(".", "", $_POST["peso"]);
+                $peso = str_replace(",", ".", $peso);
+
+                $valor = str_replace(".", "", $_POST["valor"]);
+                $valor = str_replace(",", ".", $valor);
+
+                $quantidade = $_POST["quantidade"];
+                $cor = ["cor"];
+                $tamanho = ["tamanho"];
+                $desconto = ["desconto"];
+                $categoriaId = ["categoria"];
+                
     
                 $sql = "UPDATE tbl_produto SET descricao = '$descricao' WHERE id = $id";
                 // echo $sql; exit;

@@ -13,7 +13,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -51,15 +50,17 @@
                 <?php
                 
                     while ($produto = mysqli_fetch_array($resultado)) {
-                        
+                        // var_dump($produto);exit;
                         $valor = $produto["valor"];
                         $desconto = $produto["desconto"];
+
 
                         $valorDesconto = 0;
 
                         if ($desconto > 0) {
                             
                             $valorDesconto = ($desconto / 100) * $valor;
+                            
 
                         }
 
@@ -70,8 +71,7 @@
                         // $valor -= $valorDesconto;
 
                         $valorParcela = $valorComDesconto / $qtdParcelas;
-                    
-                
+
                 ?>
 
                 <article class="card-produto">
@@ -88,27 +88,25 @@
                 <section>
 
                     <span class="preco">
-                        R$ <?php echo number_format($valorComDesconto, 2, ',', '.');?>
-                        <em><?php echo $desconto;?>% off</em>
+                        R$ <?php echo number_format($valorComDesconto, 2, ',', '.'); ?>
+                        <em> <?php echo $desconto; ?> % off</em>
                     </span>
 
                     <span class="parcelamento">ou em
                         <em>
-                        <?php echo $qtdParcelas;?>x R$<?php echo number_format($valorParcela, 2, ',', '.');?> sem juros
+                        <?php echo $qtdParcelas; ?> x R$ <?php echo number_format($valorParcela, 2, ",", ".")?> sem juros
                         </em>
                     </span>
 
                     <span class="descricao"><?php echo $produto["descricao"]?></span>
 
                     <span class="categoria">
-                        <em><?php echo $produto["descricao"]?></em>
+                        <em><?php echo $produto["descricao"]; ?></em>
                      </span>
 
                 </article>
 
-                <?php
-                    }
-                ?>
+                <?php } ?>
 
                 </section>
 
